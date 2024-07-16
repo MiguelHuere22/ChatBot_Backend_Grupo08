@@ -17,6 +17,7 @@ from services.observacion import observaciones
 from services.correo import correos
 from services.nivel_ansiedad import nivelansiedades
 from services.recomendacion import recomendaciones
+from services.conversacion import conversaciones
 
 from config import DATABASE_CONNECTION
 from sqlalchemy import text
@@ -48,7 +49,7 @@ app.register_blueprint(observaciones)
 app.register_blueprint(nivelansiedades)
 app.register_blueprint(recomendaciones)
 app.register_blueprint(correos)
-
+app.register_blueprint(conversaciones) 
 
 with app.app_context():
     db.create_all()
